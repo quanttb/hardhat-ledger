@@ -1,0 +1,31 @@
+{
+  "name": "hardhat-ledger",
+  "version": "0.0.1",
+  "author": "Quan Tran <tranthienbaoquan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "migrate:testnet": "hardhat run --network testnet scripts/migrate.js",
+    "migrate:mainnet": "hardhat run --network mainnet scripts/migrate.js",
+    "verify:testnet": "hardhat verify --network testnet --constructor-args scripts/arguments.js 0x0000",
+    "verify:mainnet": "hardhat verify --network mainnet --constructor-args scripts/arguments.js 0x0000"
+  },
+  "dependencies": {
+    "@ethersproject/hardware-wallets": "^5.5.0",
+    "@ledgerhq/hw-app-eth": "^6.26.0",
+    "@ledgerhq/hw-transport-node-hid": "^6.24.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.2",
+    "@openzeppelin/hardhat-upgrades": "^1.15.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.9.1",
+    "web3": "^1.7.1"
+  }
+}
